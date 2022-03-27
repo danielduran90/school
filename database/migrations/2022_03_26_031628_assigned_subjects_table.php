@@ -18,6 +18,7 @@ return new class extends Migration
             $table->integer('user_id');
             $table->integer('subject_id');
             $table->float('score');
+            $table->timestamps();
         });
     }
 
