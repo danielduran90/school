@@ -12,7 +12,7 @@ class RolController extends Controller
 {
     function __construct()
     {
-        $this->middleware('permission:view-rol | permission:new-rol | permission:edit-rol | permission:delete-rol', ['only' => ['index']]);
+        $this->middleware('permission:view-rol', ['only' => ['index']]);
         $this->middleware('permission:new-rol', ['only' => ['create', 'store']]);
         $this->middleware('permission:edit-rol', ['only' => ['edit', 'update']]);
         $this->middleware('permission:delete-rol', ['only' => ['destroy']]);
@@ -108,6 +108,6 @@ class RolController extends Controller
     public function destroy($id)
     {
         DB::table('roles')->where('id', $id)->delete();
-        return redirect()->rooute('roles.index');
+        return redirect()->route('roles.index');
     }
 }

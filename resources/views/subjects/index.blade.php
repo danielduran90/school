@@ -20,24 +20,26 @@
                                 <thead style="background-color:#6777ef">                                                       
                                     <th style="color:#fff;">Asignatura</th>
                                     <th style="color:#fff;">Docente</th>
-                                    <th style="color:#fff;">Acciones</th>
+                                    @can('edit-subject')
+                                        <th style="color:#fff;">Acciones</th>
+                                    @endcan
                                 </thead>  
                                 <tbody>
                                 @foreach ($subjects as $subject)
                                 <tr>                           
                                     <td>{{ $subject->title}}</td>
                                     <td>{{ $subject->name}}</td>
-                                    <td>                                
-                                        @can('edit-subject')
+                                    @can('edit-subject')
+                                        <td>                                
                                             <a class="btn btn-primary" href="{{ route('subject.edit',$subject->id) }}">Editar</a>
-                                        @endcan
-                                        
-                                        @can('delete-subject')
-                                            {!! Form::open(['method' => 'DELETE','route' => ['subject.destroy', $subject->id],'style'=>'display:inline']) !!}
-                                                {!! Form::submit('Borrar', ['class' => 'btn btn-danger']) !!}
-                                            {!! Form::close() !!}
-                                        @endcan
-                                    </td>
+                                            
+                                            @can('delete-subject')
+                                                {!! Form::open(['method' => 'DELETE','route' => ['subject.destroy', $subject->id],'style'=>'display:inline']) !!}
+                                                    {!! Form::submit('Borrar', ['class' => 'btn btn-danger']) !!}
+                                                {!! Form::close() !!}
+                                            @endcan
+                                        </td>
+                                    @endcan
                                 </tr>
                                 @endforeach
                                 </tbody>               

@@ -38,6 +38,17 @@
                                 </div>
                             </div>
                             <div class="col-xs-12 col-sm-12 col-md-12">
+                                <div class="form-group">
+                                    <label for="">Estudiantes que veran esta Asignatura:</label>
+                                    <br/>
+                                    @foreach($students as $value)
+                                        <label>{{ Form::checkbox('students[]', $value->id, false, array('class' => 'name')) }}
+                                        {{ $value->name }}</label>
+                                    <br/>
+                                    @endforeach
+                                </div>
+                            </div> 
+                            <div class="col-xs-12 col-sm-12 col-md-12">
                                 <button type="submit" class="btn btn-primary">Guardar</button>
                             </div>
                         </div>

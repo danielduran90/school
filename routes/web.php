@@ -5,6 +5,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\RolController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\SubjectController;
+use App\Http\Controllers\ScoresController;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,4 +32,5 @@ Route::group(['middleware' => ['auth']], function(){
     Route::resource('roles', RolController::class);
     Route::resource('user', UserController::class);
     Route::resource('subject', SubjectController::class);
+    Route::resource('scores', ScoresController::class);
 });

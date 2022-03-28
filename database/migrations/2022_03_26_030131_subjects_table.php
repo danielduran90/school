@@ -16,8 +16,13 @@ return new class extends Migration
         Schema::create('subjects', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->integer('exponent_id');
+            $table->unsignedBigInteger('exponent_id');
             $table->timestamps();
+            $table->foreign("exponent_id")
+            ->references("id")
+            ->on("users")
+            ->onDelete("cascade")
+            ->onUpdate("cascade");
         });
     }
 

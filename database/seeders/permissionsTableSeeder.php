@@ -23,7 +23,13 @@ class permissionsTableSeeder extends Seeder
             'view-subject',
             'new-subject',
             'edit-subject',
-            'delete-subject'
+            'delete-subject',
+            'view-scores',
+            'edit-scores',
+            'view-user',
+            'new-user',
+            'edit-user',
+            'delete-user',
         ];
 
         foreach($permissions as $permission) {

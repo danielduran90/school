@@ -48,3 +48,17 @@ Paso a paso de lo que debes ejecutar para tener el proyecto en su servidor local
     php artisan serve
     ```
  8. Listo, ya podrás visualizar e interactuar con el proyecto en local.
+
+ usuarios para pruebas:
+
+ - user: admin@gmail.com
+ - Password: 12345
+ - Role: Admin
+
+ - user: carlos@gmail.com
+ - Password: 12345
+ - Role: Docente
+
+ - user: daniel@gmail.com
+ - Password: 12345
+ - Role: Estudiante
