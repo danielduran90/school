@@ -31,7 +31,7 @@ Paso a paso de lo que debes ejecutar para tener el proyecto en su servidor local
     ```
  4. Ingresa a la carpeta del repositorio recien descargado desde tu explorador de archivos o con el siguiente comando:
     ```
-    cd school
+    cd crud-school
     ```
  5. Instala las dependencias del proyecto con los siguientes comandos:
     ```
