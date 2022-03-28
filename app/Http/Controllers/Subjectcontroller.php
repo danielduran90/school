@@ -143,7 +143,8 @@ class SubjectController extends Controller
             if (!count($isaAsigned)) {
                 Assigned_subjects::create([
                     'user_id' => $val,
-                    'subject_id' => $id
+                    'subject_id' => $id,
+                    'score' => 0
                 ]);
             }
         }
@@ -164,7 +165,6 @@ class SubjectController extends Controller
     public function destroy($id)
     {
         Subjects::find($id)->delete();
-        Assigned_subjects::where('subject_id', $id)->delete();
         return redirect()->route('subject.index');
     }
 

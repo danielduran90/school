@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('subject_id');
-            $table->float('score');
+            $table->float('score')->nullable();
             $table->timestamps();
             $table->foreign("user_id")
             ->references("id")

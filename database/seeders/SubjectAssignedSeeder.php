@@ -36,7 +36,7 @@ class SubjectAssignedSeeder extends Seeder
         $subjects4 = Assigned_subjects::Create([
             'user_id' => 3,
             'subject_id' => 2,
-            'score' => 1.6
+            'score' => 4.1
         ]);
 
         $subjects5 = Assigned_subjects::Create([

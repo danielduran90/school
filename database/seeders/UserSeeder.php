@@ -45,7 +45,7 @@ class UserSeeder extends Seeder
             'password' => bcrypt('12345')
         ]);
         $rol3 = Role::create(['name' => 'Estudiante']);
-        $rol3->syncPermissions([5]);
+        $rol3->syncPermissions([9]);
         $usuario3->assignRole([$rol3->id]);
 
 
